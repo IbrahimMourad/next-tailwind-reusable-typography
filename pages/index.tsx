@@ -3,11 +3,10 @@ import { Typography } from '@/components/Typography'
 const Home = () => {
   return (
     <>
-      <Typography>We’re making the easiest it can be!</Typography>
-      <Typography variant='heading1' letterSpacing='4'>
+      <Typography variant='heading1'>
         We’re making the easiest it can be!
       </Typography>
-      <Typography variant='heading2' font='opensans'>
+      <Typography variant='heading2'>
         We’re making the easiest it can be!
       </Typography>
       <Typography variant='heading3'>
@@ -31,7 +30,6 @@ const Home = () => {
       <Typography variant='body-small'>
         We’re making the easiest it can be!
       </Typography>
-      <p className='font-oswald'></p>
     </>
   )
 }
