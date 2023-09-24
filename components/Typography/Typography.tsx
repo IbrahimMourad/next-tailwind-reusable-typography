@@ -10,6 +10,20 @@ const Typography = ({
   letterSpacing,
   children,
 }: TypographyProps) => {
+  const variantsMapping = {
+    heading1: 'h1',
+    heading2: 'h2',
+    heading3: 'h6',
+    heading4: 'h6',
+    heading5: 'h6',
+    heading6: 'h6',
+    'body-large': 'p',
+    'body-medium': 'p',
+    'body-small': 'p',
+  }
+
+  const Component: any = variant ? variantsMapping[variant] : 'h1'
+
   const classes = useMemo(() => {
     return classNames(
       tailwindConfig({
@@ -21,7 +35,7 @@ const Typography = ({
       className
     )
   }, [variant, className])
-  return <h2 className={classes}>{children}</h2>
+  return <Component className={classes}>{children}</Component>
 }
 
 export default Typography
