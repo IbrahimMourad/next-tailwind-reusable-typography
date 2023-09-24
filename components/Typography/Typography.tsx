@@ -22,7 +22,9 @@ const Typography = ({
     'body-small': 'p',
   }
 
-  const Component: any = variant ? variantsMapping[variant] : 'h1'
+  const Component: keyof JSX.IntrinsicElements = variant
+    ? variantsMapping[variant]
+    : variantsMapping['p']
 
   const classes = useMemo(() => {
     return classNames(
